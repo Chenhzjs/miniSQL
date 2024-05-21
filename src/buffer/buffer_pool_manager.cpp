@@ -33,7 +33,52 @@ Page *BufferPoolManager::FetchPage(page_id_t page_id) {
   // 2.     If R is dirty, write it back to the disk.
   // 3.     Delete R from the page table and insert P.
   // 4.     Update P's metadata, read in the page content from disk, and then return a pointer to P.
-  return nullptr;
+  latch_.lock();
+  // 1.
+  auto iter = page_table_.find(page_id);
+  // 1.1
+  if (iter != page_table_.end()) {
+    frame_id_t frame_id = page_table_[page_id];
+    Page *page = &(pages_[frame_id]);
+    replacer_->Pin(frame_id);
+    page->pin_count_ ++;
+    latch_.unlock();
+    return page;
+  }
+  // 1.2
+  frame_id_t frame_id = -1;
+  bool find_victim = false;
+  if (!free_list_.empty()) {
+    frame_id = free_list_.front();
+    free_list_.pop_front();
+    find_victim = true;
+  } else {
+    find_victim = replacer_->Victim(&frame_id);
+  }
+  // 1.2 :not found
+  if (find_victim == false) {
+    latch_.unlock();
+    return nullptr;
+  }
+  Page *page = &(pages_[frame_id]);
+  // 2.
+  if (page->IsDirty()) {
+    disk_manager_->WritePage(page->page_id_, page->data_);
+    page->is_dirty_ = false;
+  }
+  // 3.
+  page_table_.erase(page->page_id_);
+  if (page_id != INVALID_PAGE_ID) {
+    page_table_.insert(make_pair(page_id, frame_id));
+  }
+  page->ResetMemory();
+  page->page_id_ = page_id;
+  // 4.
+  disk_manager_->ReadPage(page->page_id_, page->data_);
+  replacer_->Pin(frame_id);
+  page->pin_count_ = 1;
+  latch_.unlock();
+  return page;
 }
 
 /**
@@ -45,7 +90,40 @@ Page *BufferPoolManager::NewPage(page_id_t &page_id) {
   // 2.   Pick a victim page P from either the free list or the replacer. Always pick from the free list first.
   // 3.   Update P's metadata, zero out memory and add P to the page table.
   // 4.   Set the page ID output parameter. Return a pointer to P.
-  return nullptr;
+  latch_.lock();
+  frame_id_t frame_id = -1;
+  bool find_victim = false;
+  // 2.
+  if (!free_list_.empty()) {
+    frame_id = free_list_.front();
+    free_list_.pop_front();
+    find_victim = true;
+  } else {
+    find_victim = replacer_->Victim(&frame_id);
+  }
+  // 1.
+  if (find_victim == false) {
+    latch_.unlock();
+    return nullptr;
+  }
+  // 3,4.
+  page_id = disk_manager_->AllocatePage();
+  Page *page = &(pages_[frame_id]);
+  if (page->IsDirty()) {
+    disk_manager_->WritePage(page->page_id_, page->data_);
+    page->is_dirty_ = false;
+  }
+  page_table_.erase(page->page_id_);
+  if (page_id != INVALID_PAGE_ID) {
+    page_table_.insert(make_pair(page_id, frame_id));
+  }
+  page->ResetMemory();
+  page->page_id_ = page_id;
+  disk_manager_->ReadPage(page->page_id_, page->data_);
+  replacer_->Pin(frame_id);
+  page->pin_count_ = 1;
+  latch_.unlock();
+  return page;
 }
 
 /**
@@ -57,21 +135,80 @@ bool BufferPoolManager::DeletePage(page_id_t page_id) {
   // 1.   If P does not exist, return true.
   // 2.   If P exists, but has a non-zero pin-count, return false. Someone is using the page.
   // 3.   Otherwise, P can be deleted. Remove P from the page table, reset its metadata and return it to the free list.
-  return false;
+  latch_.lock();
+  auto iter = page_table_.find(page_id);
+  // 1.
+  if (iter == page_table_.end()) {
+    latch_.unlock();
+    return true;
+  }
+  // 2.
+  frame_id_t frame_id = page_table_[page_id];
+  Page *page = &(pages_[frame_id]);
+  ASSERT(page_id == page->page_id_, "the unordered_map may get ruined!");
+  if (page->GetPinCount() > 0) {
+    latch_.unlock();
+    return false;
+  }
+  // 3.
+  disk_manager_->DeAllocatePage(page->page_id_);
+  if (page->IsDirty()) {
+    disk_manager_->WritePage(page->page_id_, page->data_);
+    page->is_dirty_ = false;
+  }
+  page_table_.erase(page->page_id_);
+  page->ResetMemory();
+  page->page_id_ = INVALID_PAGE_ID;
+  free_list_.push_back(frame_id);
+  latch_.unlock();
+  return true;
 }
 
 /**
  * TODO: Student Implement
  */
 bool BufferPoolManager::UnpinPage(page_id_t page_id, bool is_dirty) {
-  return false;
+  latch_.lock();
+  auto iter = page_table_.find(page_id);
+  if (iter == page_table_.end()) {
+    latch_.unlock();
+    return false;
+  }
+  frame_id_t frame_id = page_table_[page_id];
+  Page *page = &(pages_[frame_id]);
+  ASSERT(page_id == page->page_id_, "the unordered_map may get ruined!");
+  if (page->GetPinCount() == 0) {
+    latch_.unlock();
+    return false;
+  }
+  page->pin_count_ --;
+  if (page->GetPinCount() == 0) {
+    replacer_->Unpin(frame_id);
+  }
+  if (is_dirty) {
+    page->is_dirty_ = true;
+  }
+  latch_.unlock();
+  return true;
 }
 
 /**
  * TODO: Student Implement
  */
 bool BufferPoolManager::FlushPage(page_id_t page_id) {
-  return false;
+  latch_.lock();
+  auto iter = page_table_.find(page_id);
+  if (iter == page_table_.end()) {
+    latch_.unlock();
+    return false;
+  }
+  frame_id_t frame_id = page_table_[page_id];
+  Page *page = &(pages_[frame_id]);
+  ASSERT(page_id == page->page_id_, "the unordered_map may get ruined!");
+  disk_manager_->WritePage(page->page_id_, page->data_);
+  page->is_dirty_ = false;
+  latch_.unlock();
+  return true;
 }
 
 page_id_t BufferPoolManager::AllocatePage() {

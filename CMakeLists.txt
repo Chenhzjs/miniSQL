@@ -1,5 +1,6 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.16)
-
+add_compile_options(-w)
+add_definitions(-std=c++11)
 # Suppress cmake policy warning
 if (APPLE)
     SET(CMAKE_MACOSX_RPATH 0)

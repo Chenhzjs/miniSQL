@@ -9,6 +9,11 @@
 template <size_t PageSize>
 class BitmapPage {
  public:
+  BitmapPage() {
+    page_allocated_ = 0;
+    next_free_page_ = 0;
+    memset(bytes, 0, sizeof(bytes));
+  }
   /**
    * @return The number of pages that the bitmap page can record, i.e. the capacity of an extent.
    */
@@ -45,8 +50,8 @@ class BitmapPage {
 
  private:
   /** The space occupied by all members of the class should be equal to the PageSize */
-  [[maybe_unused]] uint32_t page_allocated_;
-  [[maybe_unused]] uint32_t next_free_page_;
+  [[maybe_unused]] uint32_t page_allocated_{0};
+  [[maybe_unused]] uint32_t next_free_page_{0};
   [[maybe_unused]] unsigned char bytes[MAX_CHARS];
 };
 

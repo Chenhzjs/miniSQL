@@ -1,0 +1,1532 @@
+The system is: Linux - 5.10.16.3-microsoft-standard-WSL2 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/3.22.1/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/3.22.1/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_7e4d1/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_7e4d1.dir/build.make CMakeFiles/cmTC_7e4d1.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_7e4d1.dir/flags.make' has modification time 1242 s in the future
+Building C object CMakeFiles/cmTC_7e4d1.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_7e4d1.dir/testCCompiler.c.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_7e4d1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7e4d1.dir/link.txt --verbose=1
+/usr/bin/cc CMakeFiles/cmTC_7e4d1.dir/testCCompiler.c.o -o cmTC_7e4d1 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_398d1/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_398d1.dir/build.make CMakeFiles/cmTC_398d1.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_398d1.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_398d1.dir/testCXXCompiler.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_398d1.dir/testCXXCompiler.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_398d1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_398d1.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_398d1.dir/testCXXCompiler.cxx.o -o cmTC_398d1 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9ede4/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_9ede4.dir/build.make CMakeFiles/cmTC_9ede4.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_9ede4.dir/flags.make' has modification time 1242 s in the future
+Building C object CMakeFiles/cmTC_9ede4.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_9ede4.dir/CheckIncludeFile.c.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_9ede4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9ede4.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_9ede4.dir/CheckIncludeFile.c.o -o cmTC_9ede4 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_8b256/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_8b256.dir/build.make CMakeFiles/cmTC_8b256.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_8b256.dir/flags.make' has modification time 1242 s in the future
+Building C object CMakeFiles/cmTC_8b256.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_8b256.dir/src.c.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_8b256
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8b256.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_8b256.dir/src.c.o -o cmTC_8b256 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the include file unwind.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_0d894/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_0d894.dir/build.make CMakeFiles/cmTC_0d894.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_0d894.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_0d894.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_0d894.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_0d894
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0d894.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_0d894.dir/CheckIncludeFile.cxx.o -o cmTC_0d894 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the _Unwind_Backtrace exist passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_20dda/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_20dda.dir/build.make CMakeFiles/cmTC_20dda.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_20dda.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_20dda.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_20dda.dir/CheckSymbolExists.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_20dda
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20dda.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_20dda.dir/CheckSymbolExists.cxx.o -o cmTC_20dda 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+File /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <unwind.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _Unwind_Backtrace
+  return ((int*)(&_Unwind_Backtrace))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the include file dlfcn.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1ec01/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_1ec01.dir/build.make CMakeFiles/cmTC_1ec01.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_1ec01.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_1ec01.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_1ec01.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_1ec01
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1ec01.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_1ec01.dir/CheckIncludeFile.cxx.o -o cmTC_1ec01 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file execinfo.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_3d90e/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_3d90e.dir/build.make CMakeFiles/cmTC_3d90e.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_3d90e.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_3d90e.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_3d90e.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_3d90e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3d90e.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_3d90e.dir/CheckIncludeFile.cxx.o -o cmTC_3d90e 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file glob.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_eb9d9/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_eb9d9.dir/build.make CMakeFiles/cmTC_eb9d9.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_eb9d9.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_eb9d9.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_eb9d9.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_eb9d9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb9d9.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_eb9d9.dir/CheckIncludeFile.cxx.o -o cmTC_eb9d9 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file inttypes.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ba68a/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_ba68a.dir/build.make CMakeFiles/cmTC_ba68a.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_ba68a.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_ba68a.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_ba68a.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_ba68a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ba68a.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_ba68a.dir/CheckIncludeFile.cxx.o -o cmTC_ba68a 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file memory.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_4d42f/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_4d42f.dir/build.make CMakeFiles/cmTC_4d42f.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_4d42f.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_4d42f.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_4d42f.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_4d42f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4d42f.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_4d42f.dir/CheckIncludeFile.cxx.o -o cmTC_4d42f 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+The system is: Linux - 5.10.16.3-microsoft-standard-WSL2 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/3.22.1/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/3.22.1/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_c5ac8/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_c5ac8.dir/build.make CMakeFiles/cmTC_c5ac8.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_c5ac8.dir/flags.make' has modification time 1242 s in the future
+Building C object CMakeFiles/cmTC_c5ac8.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_c5ac8.dir/testCCompiler.c.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_c5ac8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c5ac8.dir/link.txt --verbose=1
+/usr/bin/cc CMakeFiles/cmTC_c5ac8.dir/testCCompiler.c.o -o cmTC_c5ac8 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_59366/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_59366.dir/build.make CMakeFiles/cmTC_59366.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_59366.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_59366.dir/testCXXCompiler.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_59366.dir/testCXXCompiler.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_59366
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_59366.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_59366.dir/testCXXCompiler.cxx.o -o cmTC_59366 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_938e5/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_938e5.dir/build.make CMakeFiles/cmTC_938e5.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_938e5.dir/flags.make' has modification time 1242 s in the future
+Building C object CMakeFiles/cmTC_938e5.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_938e5.dir/CheckIncludeFile.c.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_938e5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_938e5.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_938e5.dir/CheckIncludeFile.c.o -o cmTC_938e5 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5b0e7/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_5b0e7.dir/build.make CMakeFiles/cmTC_5b0e7.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_5b0e7.dir/flags.make' has modification time 1242 s in the future
+Building C object CMakeFiles/cmTC_5b0e7.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_5b0e7.dir/src.c.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_5b0e7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5b0e7.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_5b0e7.dir/src.c.o -o cmTC_5b0e7 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the include file unwind.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_214a1/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_214a1.dir/build.make CMakeFiles/cmTC_214a1.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_214a1.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_214a1.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_214a1.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_214a1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_214a1.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_214a1.dir/CheckIncludeFile.cxx.o -o cmTC_214a1 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the _Unwind_Backtrace exist passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ef261/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_ef261.dir/build.make CMakeFiles/cmTC_ef261.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_ef261.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_ef261.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_ef261.dir/CheckSymbolExists.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_ef261
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef261.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_ef261.dir/CheckSymbolExists.cxx.o -o cmTC_ef261 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+File /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <unwind.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _Unwind_Backtrace
+  return ((int*)(&_Unwind_Backtrace))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the include file dlfcn.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_96c09/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_96c09.dir/build.make CMakeFiles/cmTC_96c09.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_96c09.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_96c09.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_96c09.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_96c09
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96c09.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_96c09.dir/CheckIncludeFile.cxx.o -o cmTC_96c09 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file execinfo.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_59e70/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_59e70.dir/build.make CMakeFiles/cmTC_59e70.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_59e70.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_59e70.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_59e70.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_59e70
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_59e70.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_59e70.dir/CheckIncludeFile.cxx.o -o cmTC_59e70 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file glob.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ac4de/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_ac4de.dir/build.make CMakeFiles/cmTC_ac4de.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_ac4de.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_ac4de.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_ac4de.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_ac4de
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac4de.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_ac4de.dir/CheckIncludeFile.cxx.o -o cmTC_ac4de 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file inttypes.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9475c/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_9475c.dir/build.make CMakeFiles/cmTC_9475c.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_9475c.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_9475c.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_9475c.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_9475c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9475c.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_9475c.dir/CheckIncludeFile.cxx.o -o cmTC_9475c 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file memory.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b0be5/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_b0be5.dir/build.make CMakeFiles/cmTC_b0be5.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_b0be5.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_b0be5.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_b0be5.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_b0be5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b0be5.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_b0be5.dir/CheckIncludeFile.cxx.o -o cmTC_b0be5 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file pwd.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5ddfa/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_5ddfa.dir/build.make CMakeFiles/cmTC_5ddfa.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_5ddfa.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_5ddfa.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_5ddfa.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_5ddfa
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ddfa.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_5ddfa.dir/CheckIncludeFile.cxx.o -o cmTC_5ddfa 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_05d0f/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_05d0f.dir/build.make CMakeFiles/cmTC_05d0f.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_05d0f.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_05d0f.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_05d0f.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_05d0f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_05d0f.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_05d0f.dir/CheckIncludeFile.cxx.o -o cmTC_05d0f 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file strings.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_3b210/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_3b210.dir/build.make CMakeFiles/cmTC_3b210.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_3b210.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_3b210.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_3b210.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_3b210
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3b210.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_3b210.dir/CheckIncludeFile.cxx.o -o cmTC_3b210 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file sys/stat.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_4c4b8/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_4c4b8.dir/build.make CMakeFiles/cmTC_4c4b8.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_4c4b8.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_4c4b8.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_4c4b8.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_4c4b8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4c4b8.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_4c4b8.dir/CheckIncludeFile.cxx.o -o cmTC_4c4b8 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file sys/syscall.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_6b99f/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_6b99f.dir/build.make CMakeFiles/cmTC_6b99f.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_6b99f.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_6b99f.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_6b99f.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_6b99f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6b99f.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_6b99f.dir/CheckIncludeFile.cxx.o -o cmTC_6b99f 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file sys/time.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_c6806/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_c6806.dir/build.make CMakeFiles/cmTC_c6806.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_c6806.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_c6806.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_c6806.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_c6806
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c6806.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_c6806.dir/CheckIncludeFile.cxx.o -o cmTC_c6806 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b00ae/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_b00ae.dir/build.make CMakeFiles/cmTC_b00ae.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_b00ae.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_b00ae.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_b00ae.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_b00ae
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b00ae.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_b00ae.dir/CheckIncludeFile.cxx.o -o cmTC_b00ae 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file sys/utsname.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_10259/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_10259.dir/build.make CMakeFiles/cmTC_10259.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_10259.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_10259.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_10259.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_10259
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_10259.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_10259.dir/CheckIncludeFile.cxx.o -o cmTC_10259 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file sys/wait.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_49082/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_49082.dir/build.make CMakeFiles/cmTC_49082.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_49082.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_49082.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_49082.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_49082
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_49082.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_49082.dir/CheckIncludeFile.cxx.o -o cmTC_49082 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file syscall.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9241a/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_9241a.dir/build.make CMakeFiles/cmTC_9241a.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_9241a.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_9241a.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_9241a.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_9241a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9241a.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_9241a.dir/CheckIncludeFile.cxx.o -o cmTC_9241a 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file syslog.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ff89e/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_ff89e.dir/build.make CMakeFiles/cmTC_ff89e.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_ff89e.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_ff89e.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_ff89e.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_ff89e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ff89e.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_ff89e.dir/CheckIncludeFile.cxx.o -o cmTC_ff89e 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file ucontext.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_c2da4/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_c2da4.dir/build.make CMakeFiles/cmTC_c2da4.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_c2da4.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_c2da4.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_c2da4.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_c2da4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c2da4.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_c2da4.dir/CheckIncludeFile.cxx.o -o cmTC_c2da4 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file unistd.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_d6a34/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_d6a34.dir/build.make CMakeFiles/cmTC_d6a34.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_d6a34.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_d6a34.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_d6a34.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_d6a34
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6a34.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_d6a34.dir/CheckIncludeFile.cxx.o -o cmTC_d6a34 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file ext/hash_map exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f039e/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_f039e.dir/build.make CMakeFiles/cmTC_f039e.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_f039e.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_f039e.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_f039e.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+In file included from /usr/include/c++/11/ext/hash_map:60,
+                 from /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx:1:
+/usr/include/c++/11/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+   32 | #warning \
+      |  ^~~~~~~
+Linking CXX executable cmTC_f039e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f039e.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_f039e.dir/CheckIncludeFile.cxx.o -o cmTC_f039e 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file ext/hash_set exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ccbe9/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_ccbe9.dir/build.make CMakeFiles/cmTC_ccbe9.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_ccbe9.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_ccbe9.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_ccbe9.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+In file included from /usr/include/c++/11/ext/hash_set:60,
+                 from /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx:1:
+/usr/include/c++/11/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header which may be removed without further notice at a future date. Please use a non-deprecated interface with equivalent functionality instead. For a listing of replacement headers and interfaces, consult the file backward_warning.h. To disable this warning use -Wno-deprecated. [-Wcpp]
+   32 | #warning \
+      |  ^~~~~~~
+Linking CXX executable cmTC_ccbe9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ccbe9.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_ccbe9.dir/CheckIncludeFile.cxx.o -o cmTC_ccbe9 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file ext/slist exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ef715/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_ef715.dir/build.make CMakeFiles/cmTC_ef715.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_ef715.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_ef715.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_ef715.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_ef715
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef715.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_ef715.dir/CheckIncludeFile.cxx.o -o cmTC_ef715 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file tr1/unordered_map exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_36b90/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_36b90.dir/build.make CMakeFiles/cmTC_36b90.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_36b90.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_36b90.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_36b90.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_36b90
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_36b90.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_36b90.dir/CheckIncludeFile.cxx.o -o cmTC_36b90 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file tr1/unordered_set exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_103d3/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_103d3.dir/build.make CMakeFiles/cmTC_103d3.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_103d3.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_103d3.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_103d3.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_103d3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_103d3.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_103d3.dir/CheckIncludeFile.cxx.o -o cmTC_103d3 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file unordered_map exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_78f9b/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_78f9b.dir/build.make CMakeFiles/cmTC_78f9b.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_78f9b.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_78f9b.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_78f9b.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_78f9b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_78f9b.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_78f9b.dir/CheckIncludeFile.cxx.o -o cmTC_78f9b 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file unordered_set exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_39443/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_39443.dir/build.make CMakeFiles/cmTC_39443.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_39443.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_39443.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_39443.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_39443
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_39443.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_39443.dir/CheckIncludeFile.cxx.o -o cmTC_39443 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_87edb/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_87edb.dir/build.make CMakeFiles/cmTC_87edb.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_87edb.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_87edb.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_87edb.dir/CheckIncludeFile.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+Linking CXX executable cmTC_87edb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_87edb.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_87edb.dir/CheckIncludeFile.cxx.o -o cmTC_87edb 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the function dladdr exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_097d4/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_097d4.dir/build.make CMakeFiles/cmTC_097d4.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_097d4.dir/flags.make' has modification time 1242 s in the future
+Building C object CMakeFiles/cmTC_097d4.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=dladdr -fPIE -o CMakeFiles/cmTC_097d4.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_097d4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_097d4.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=dladdr CMakeFiles/cmTC_097d4.dir/CheckFunctionExists.c.o -o cmTC_097d4 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the function fcntl exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_6cb77/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_6cb77.dir/build.make CMakeFiles/cmTC_6cb77.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_6cb77.dir/flags.make' has modification time 1242 s in the future
+Building C object CMakeFiles/cmTC_6cb77.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=fcntl -fPIE -o CMakeFiles/cmTC_6cb77.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_6cb77
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6cb77.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=fcntl CMakeFiles/cmTC_6cb77.dir/CheckFunctionExists.c.o -o cmTC_6cb77 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the function pread exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_00451/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_00451.dir/build.make CMakeFiles/cmTC_00451.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_00451.dir/flags.make' has modification time 1242 s in the future
+Building C object CMakeFiles/cmTC_00451.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pread -fPIE -o CMakeFiles/cmTC_00451.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_00451
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_00451.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pread CMakeFiles/cmTC_00451.dir/CheckFunctionExists.c.o -o cmTC_00451 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the function pwrite exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_7197f/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_7197f.dir/build.make CMakeFiles/cmTC_7197f.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_7197f.dir/flags.make' has modification time 1242 s in the future
+Building C object CMakeFiles/cmTC_7197f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pwrite -fPIE -o CMakeFiles/cmTC_7197f.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_7197f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7197f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pwrite CMakeFiles/cmTC_7197f.dir/CheckFunctionExists.c.o -o cmTC_7197f 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the function sigaction exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_f591b/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_f591b.dir/build.make CMakeFiles/cmTC_f591b.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_f591b.dir/flags.make' has modification time 1242 s in the future
+Building C object CMakeFiles/cmTC_f591b.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sigaction -fPIE -o CMakeFiles/cmTC_f591b.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f591b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f591b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=sigaction CMakeFiles/cmTC_f591b.dir/CheckFunctionExists.c.o -o cmTC_f591b 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Determining if the function sigaltstack exists passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_907c8/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_907c8.dir/build.make CMakeFiles/cmTC_907c8.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_907c8.dir/flags.make' has modification time 1242 s in the future
+Building C object CMakeFiles/cmTC_907c8.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sigaltstack -fPIE -o CMakeFiles/cmTC_907c8.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_907c8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_907c8.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=sigaltstack CMakeFiles/cmTC_907c8.dir/CheckFunctionExists.c.o -o cmTC_907c8 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+
+Performing C++ SOURCE FILE Test HAVE_NO_DEPRECATED succeeded with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a57e4/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_a57e4.dir/build.make CMakeFiles/cmTC_a57e4.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_a57e4.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_a57e4.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_NO_DEPRECATED  -fPIE   -Wdeprecated -o CMakeFiles/cmTC_a57e4.dir/src.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_a57e4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a57e4.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_a57e4.dir/src.cxx.o -o cmTC_a57e4 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Source file was:
+int main() { return 0; }
+Determining if the snprintf exist passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_8ee65/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_8ee65.dir/build.make CMakeFiles/cmTC_8ee65.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_8ee65.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_8ee65.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_8ee65.dir/CheckSymbolExists.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_8ee65
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8ee65.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_8ee65.dir/CheckSymbolExists.cxx.o -o cmTC_8ee65 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+File /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <cstdio>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef snprintf
+  return ((int*)(&snprintf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing C++ SOURCE FILE Test HAVE___ATTRIBUTE__ succeeded with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_816ab/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_816ab.dir/build.make CMakeFiles/cmTC_816ab.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_816ab.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_816ab.dir/src.cxx.o
+/usr/bin/c++ -DHAVE___ATTRIBUTE__  -fPIE -o CMakeFiles/cmTC_816ab.dir/src.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_816ab
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_816ab.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_816ab.dir/src.cxx.o -o cmTC_816ab 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Source file was:
+
+#include <cstdlib>
+static void foo(void) __attribute__ ((unused));
+int main(void) { return 0; }
+
+Performing C++ SOURCE FILE Test HAVE___ATTRIBUTE__VISIBILITY_DEFAULT succeeded with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_403a4/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_403a4.dir/build.make CMakeFiles/cmTC_403a4.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_403a4.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_403a4.dir/src.cxx.o
+/usr/bin/c++ -DHAVE___ATTRIBUTE__VISIBILITY_DEFAULT  -fPIE -o CMakeFiles/cmTC_403a4.dir/src.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx
+/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx:3:61: warning: ‘visibility’ attribute ignored [-Wattributes]
+    3 | static void foo(void) __attribute__ ((visibility("default")));
+      |                                                             ^
+Linking CXX executable cmTC_403a4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_403a4.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_403a4.dir/src.cxx.o -o cmTC_403a4 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Source file was:
+
+#include <cstdlib>
+static void foo(void) __attribute__ ((visibility("default")));
+int main(void) { return 0; }
+
+Performing C++ SOURCE FILE Test HAVE___ATTRIBUTE__VISIBILITY_HIDDEN succeeded with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5570f/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_5570f.dir/build.make CMakeFiles/cmTC_5570f.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_5570f.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_5570f.dir/src.cxx.o
+/usr/bin/c++ -DHAVE___ATTRIBUTE__VISIBILITY_HIDDEN  -fPIE -o CMakeFiles/cmTC_5570f.dir/src.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx
+/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx:3:60: warning: ‘visibility’ attribute ignored [-Wattributes]
+    3 | static void foo(void) __attribute__ ((visibility("hidden")));
+      |                                                            ^
+Linking CXX executable cmTC_5570f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5570f.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_5570f.dir/src.cxx.o -o cmTC_5570f 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Source file was:
+
+#include <cstdlib>
+static void foo(void) __attribute__ ((visibility("hidden")));
+int main(void) { return 0; }
+
+Performing C++ SOURCE FILE Test HAVE___BUILTIN_EXPECT succeeded with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_17082/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_17082.dir/build.make CMakeFiles/cmTC_17082.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_17082.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_17082.dir/src.cxx.o
+/usr/bin/c++ -DHAVE___BUILTIN_EXPECT  -fPIE -o CMakeFiles/cmTC_17082.dir/src.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_17082
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_17082.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_17082.dir/src.cxx.o -o cmTC_17082 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Source file was:
+
+int main(void) { if (__builtin_expect(0, 0)) return 1; return 0; }
+
+Performing C++ SOURCE FILE Test HAVE___SYNC_VAL_COMPARE_AND_SWAP succeeded with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_62d37/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_62d37.dir/build.make CMakeFiles/cmTC_62d37.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_62d37.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_62d37.dir/src.cxx.o
+/usr/bin/c++ -DHAVE___SYNC_VAL_COMPARE_AND_SWAP  -fPIE -o CMakeFiles/cmTC_62d37.dir/src.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_62d37
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_62d37.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_62d37.dir/src.cxx.o -o cmTC_62d37 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Source file was:
+
+int main(void)
+{
+  int a; if (__sync_val_compare_and_swap(&a, 0, 1)) return 1; return 0;
+}
+
+Performing C++ SOURCE FILE Test HAVE_RWLOCK succeeded with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_cc6fb/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_cc6fb.dir/build.make CMakeFiles/cmTC_cc6fb.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_cc6fb.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_cc6fb.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_RWLOCK  -fPIE -o CMakeFiles/cmTC_cc6fb.dir/src.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_cc6fb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cc6fb.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_cc6fb.dir/src.cxx.o -o cmTC_cc6fb 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Source file was:
+
+#define _XOPEN_SOURCE 500
+#include <pthread.h>
+int main(void)
+{
+  pthread_rwlock_t l;
+  pthread_rwlock_init(&l, NULL);
+  pthread_rwlock_rdlock(&l);
+  return 0;
+}
+
+Performing C++ SOURCE FILE Test STL_STD_NAMESPACE succeeded with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_74d2e/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_74d2e.dir/build.make CMakeFiles/cmTC_74d2e.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_74d2e.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_74d2e.dir/src.cxx.o
+/usr/bin/c++ -DSTL_STD_NAMESPACE  -fPIE -o CMakeFiles/cmTC_74d2e.dir/src.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_74d2e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_74d2e.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_74d2e.dir/src.cxx.o -o cmTC_74d2e 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Source file was:
+
+#include <vector>
+std::vector<int> t; int main() { }
+
+Performing C++ SOURCE FILE Test HAVE_USING_OPERATOR succeeded with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_c917b/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_c917b.dir/build.make CMakeFiles/cmTC_c917b.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_c917b.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_c917b.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_USING_OPERATOR  -fPIE -o CMakeFiles/cmTC_c917b.dir/src.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_c917b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c917b.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_c917b.dir/src.cxx.o -o cmTC_c917b 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Source file was:
+
+#include <iostream>
+std::ostream& operator<<(std::ostream&, struct s);
+using ::operator<<;
+int main() { }
+
+Performing C++ SOURCE FILE Test HAVE_NAMESPACES succeeded with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_88603/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_88603.dir/build.make CMakeFiles/cmTC_88603.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_88603.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_88603.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_NAMESPACES  -fPIE -o CMakeFiles/cmTC_88603.dir/src.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_88603
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88603.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_88603.dir/src.cxx.o -o cmTC_88603 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Source file was:
+
+namespace Outer { namespace Inner { int i = 0; }}
+using namespace Outer::Inner;;
+int main() { return i; }
+
+Performing C++ SOURCE FILE Test HAVE_GCC_TLS succeeded with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_1e554/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_1e554.dir/build.make CMakeFiles/cmTC_1e554.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_1e554.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_1e554.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_GCC_TLS  -fPIE -o CMakeFiles/cmTC_1e554.dir/src.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_1e554
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1e554.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_1e554.dir/src.cxx.o -o cmTC_1e554 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Source file was:
+
+__thread int tls;
+int main() { }
+
+Performing C++ SOURCE FILE Test HAVE_CXX11_TLS succeeded with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_11bf1/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_11bf1.dir/build.make CMakeFiles/cmTC_11bf1.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_11bf1.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_11bf1.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_CXX11_TLS  -fPIE -o CMakeFiles/cmTC_11bf1.dir/src.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_11bf1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11bf1.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_11bf1.dir/src.cxx.o -o cmTC_11bf1 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Source file was:
+
+thread_local int tls;
+int main() { }
+
+Performing C++ SOURCE FILE Test HAVE_ALIGNED_STORAGE succeeded with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_d83ac/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_d83ac.dir/build.make CMakeFiles/cmTC_d83ac.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_d83ac.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_d83ac.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_ALIGNED_STORAGE  -fPIE -o CMakeFiles/cmTC_d83ac.dir/src.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_d83ac
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d83ac.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_d83ac.dir/src.cxx.o -o cmTC_d83ac 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Source file was:
+
+#include <type_traits>
+std::aligned_storage<sizeof(char), alignof(char)>::type data;
+int main() { }
+
+Performing C++ SOURCE FILE Test HAVE_CXX11_ATOMIC succeeded with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_05836/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_05836.dir/build.make CMakeFiles/cmTC_05836.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_05836.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_05836.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_CXX11_ATOMIC  -fPIE -o CMakeFiles/cmTC_05836.dir/src.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_05836
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_05836.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_05836.dir/src.cxx.o -o cmTC_05836 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Source file was:
+
+#include <atomic>
+std::atomic<int> i;
+int main() { }
+
+Performing C++ SOURCE FILE Test HAVE_CXX11_CONSTEXPR succeeded with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_14952/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_14952.dir/build.make CMakeFiles/cmTC_14952.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_14952.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_14952.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_CXX11_CONSTEXPR  -fPIE -o CMakeFiles/cmTC_14952.dir/src.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_14952
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_14952.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_14952.dir/src.cxx.o -o cmTC_14952 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Source file was:
+
+constexpr int x = 0;
+int main() { }
+
+Performing C++ SOURCE FILE Test HAVE_CXX11_CHRONO succeeded with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_4281b/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_4281b.dir/build.make CMakeFiles/cmTC_4281b.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_4281b.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_4281b.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_CXX11_CHRONO  -fPIE -o CMakeFiles/cmTC_4281b.dir/src.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_4281b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4281b.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_4281b.dir/src.cxx.o -o cmTC_4281b 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Source file was:
+
+#include <chrono>
+std::chrono::seconds s;
+int main() { }
+
+Performing C++ SOURCE FILE Test HAVE_CXX11_NULLPTR_T succeeded with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9edf1/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_9edf1.dir/build.make CMakeFiles/cmTC_9edf1.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_9edf1.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_9edf1.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_CXX11_NULLPTR_T  -fPIE -o CMakeFiles/cmTC_9edf1.dir/src.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_9edf1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9edf1.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_9edf1.dir/src.cxx.o -o cmTC_9edf1 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Source file was:
+
+#include <cstddef>
+void foo(std::nullptr_t) {}
+int main(void) { foo(nullptr); }
+
+Performing C++ SOURCE FILE Test HAVE_LOCALTIME_R succeeded with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_71e07/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_71e07.dir/build.make CMakeFiles/cmTC_71e07.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_71e07.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_71e07.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_LOCALTIME_R  -fPIE -o CMakeFiles/cmTC_71e07.dir/src.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_71e07
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_71e07.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_71e07.dir/src.cxx.o -o cmTC_71e07 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Source file was:
+
+#include <cstdlib>
+#include <ctime>
+int main()
+{
+    time_t timep;
+    struct tm result;
+    localtime_r(&timep, &result);
+    return EXIT_SUCCESS;
+}
+
+Performing C++ SOURCE FILE Test COMPILER_HAS_HIDDEN_VISIBILITY succeeded with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_01f09/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_01f09.dir/build.make CMakeFiles/cmTC_01f09.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_01f09.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_01f09.dir/src.cxx.o
+/usr/bin/c++ -DCOMPILER_HAS_HIDDEN_VISIBILITY  -fPIE   -fvisibility=hidden -o CMakeFiles/cmTC_01f09.dir/src.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_01f09
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_01f09.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_01f09.dir/src.cxx.o -o cmTC_01f09 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY succeeded with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_0fe00/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_0fe00.dir/build.make CMakeFiles/cmTC_0fe00.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_0fe00.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_0fe00.dir/src.cxx.o
+/usr/bin/c++ -DCOMPILER_HAS_HIDDEN_INLINE_VISIBILITY  -fPIE   -fvisibility-inlines-hidden -o CMakeFiles/cmTC_0fe00.dir/src.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_0fe00
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0fe00.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_0fe00.dir/src.cxx.o -o cmTC_0fe00 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_HAS_DEPRECATED_ATTR succeeded with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ac201/fast && gmake: Warning: File 'Makefile' has modification time 1242 s in the future
+/usr/bin/gmake  -f CMakeFiles/cmTC_ac201.dir/build.make CMakeFiles/cmTC_ac201.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake[1]: Warning: File 'CMakeFiles/cmTC_ac201.dir/flags.make' has modification time 1242 s in the future
+Building CXX object CMakeFiles/cmTC_ac201.dir/src.cxx.o
+/usr/bin/c++ -DCOMPILER_HAS_DEPRECATED_ATTR  -fPIE -o CMakeFiles/cmTC_ac201.dir/src.cxx.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx
+/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx:2:33: warning: ‘int somefunc()’ is deprecated [-Wdeprecated-declarations]
+    2 |     int main() { return somefunc();}
+      |                         ~~~~~~~~^~
+/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp/src.cxx:1:37: note: declared here
+    1 | __attribute__((__deprecated__)) int somefunc() { return 0; }
+      |                                     ^~~~~~~~
+Linking CXX executable cmTC_ac201
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac201.dir/link.txt --verbose=1
+/usr/bin/c++ -rdynamic CMakeFiles/cmTC_ac201.dir/src.cxx.o -o cmTC_ac201 
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+gmake: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Source file was:
+__attribute__((__deprecated__)) int somefunc() { return 0; }
+    int main() { return somefunc();}

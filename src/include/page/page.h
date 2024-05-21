@@ -78,6 +78,7 @@ class Page {
   bool is_dirty_ = false;
   /** Page latch. */
   ReaderWriterLatch rwlatch_;
+  friend class BufferPoolManager;
 };
 
 #endif  // MINISQL_PAGE_H

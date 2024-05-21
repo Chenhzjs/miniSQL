@@ -3,7 +3,7 @@
 
 #include <list>
 #include <mutex>
-#include <unordered_set>
+#include <unordered_map>
 #include <vector>
 
 #include "buffer/replacer.h"
@@ -37,6 +37,10 @@ class LRUReplacer : public Replacer {
 
 private:
   // add your own private member variables here
+  std::mutex mtx;
+  std::list<frame_id_t> victims;
+  size_t max_size;
+  std::unordered_map<frame_id_t, std::list<frame_id_t>::iterator> lru_hash;
 };
 
 #endif  // MINISQL_LRU_REPLACER_H

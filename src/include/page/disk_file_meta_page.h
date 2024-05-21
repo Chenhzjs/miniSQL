@@ -9,11 +9,11 @@ static constexpr page_id_t MAX_VALID_PAGE_ID = (PAGE_SIZE - 8) / 4 * BitmapPage<
 
 class DiskFileMetaPage {
  public:
-  uint32_t GetExtentNums() { return num_extents_; }
+  uint32_t GetExtentNums() { return num_extents_; } // get the amounts of this extents
 
-  uint32_t GetAllocatedPages() { return num_allocated_pages_; }
+  uint32_t GetAllocatedPages() { return num_allocated_pages_; } // get the amount of allocated pages
 
-  uint32_t GetExtentUsedPage(uint32_t extent_id) {
+  uint32_t GetExtentUsedPage(uint32_t extent_id) { // get the used paged of extents[id]
     if (extent_id >= num_extents_) {
       return 0;
     }

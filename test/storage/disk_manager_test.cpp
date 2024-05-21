@@ -1,7 +1,7 @@
 #include "storage/disk_manager.h"
 
 #include <unordered_set>
-
+#include <cstdio>
 #include "gtest/gtest.h"
 
 TEST(DiskManagerTest, BitMapPageTest) {
@@ -39,13 +39,15 @@ TEST(DiskManagerTest, FreePageAllocationTest) {
   DiskManager *disk_mgr = new DiskManager(db_name);
   int extent_nums = 2;
   for (uint32_t i = 0; i < DiskManager::BITMAP_SIZE * extent_nums; i++) {
+//    printf("%d\n", i);
     page_id_t page_id = disk_mgr->AllocatePage();
     DiskFileMetaPage *meta_page = reinterpret_cast<DiskFileMetaPage *>(disk_mgr->GetMetaData());
-    EXPECT_EQ(i, page_id);
-    EXPECT_EQ(i / DiskManager::BITMAP_SIZE + 1, meta_page->GetExtentNums());
-    EXPECT_EQ(i + 1, meta_page->GetAllocatedPages());
-    EXPECT_EQ(i % DiskManager::BITMAP_SIZE + 1, meta_page->GetExtentUsedPage(i / DiskManager::BITMAP_SIZE));
+    ASSERT_EQ(i, page_id);
+    ASSERT_EQ(i / DiskManager::BITMAP_SIZE + 1, meta_page->GetExtentNums());
+    ASSERT_EQ(i + 1, meta_page->GetAllocatedPages());
+    ASSERT_EQ(i % DiskManager::BITMAP_SIZE + 1, meta_page->GetExtentUsedPage(i / DiskManager::BITMAP_SIZE));
   }
+//  printf("finish allocate.\n");
   disk_mgr->DeAllocatePage(0);
   disk_mgr->DeAllocatePage(DiskManager::BITMAP_SIZE - 1);
   disk_mgr->DeAllocatePage(DiskManager::BITMAP_SIZE);

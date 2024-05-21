@@ -4,7 +4,7 @@
 
 #include <filesystem>
 #include <stdexcept>
-
+#include <cstdio>
 #include "glog/logging.h"
 #include "page/bitmap_page.h"
 
@@ -51,29 +51,73 @@ void DiskManager::WritePage(page_id_t logical_page_id, const char *page_data) {
  * TODO: Student Implement
  */
 page_id_t DiskManager::AllocatePage() {
-  ASSERT(false, "Not implemented yet.");
-  return INVALID_PAGE_ID;
+  char buffer[PAGE_SIZE];
+  uint32_t i;
+  page_id_t physical_id;
+  BitmapPage<PAGE_SIZE> *bitmap;
+  uint32_t page_offset = 0;
+  DiskFileMetaPage *meta_page = reinterpret_cast<DiskFileMetaPage *>(meta_data_);
+  for (i = 0; i < meta_page->GetExtentNums(); i ++)
+  {
+    if (meta_page->GetExtentUsedPage(i) < BITMAP_SIZE)
+    {
+      meta_page->extent_used_page_[i] ++;
+      meta_page->num_allocated_pages_ ++;
+      physical_id = i * (BITMAP_SIZE + 1) + 1;
+      ReadPhysicalPage(physical_id, buffer);
+      bitmap = reinterpret_cast<BitmapPage<PAGE_SIZE> *>(buffer);
+      ASSERT(bitmap->AllocatePage(page_offset), "failed in allocated in bitmap");
+      WritePhysicalPage(physical_id, buffer);
+      return i * BITMAP_SIZE + page_offset;
+    }
+  }
+  // full extents or 0 extents
+  meta_page->num_extents_ ++;
+  meta_page->extent_used_page_[i] = 1;
+  meta_page->num_allocated_pages_ ++;
+  physical_id = i * (BITMAP_SIZE + 1) + 1;
+  memset(buffer, 0, sizeof(buffer));
+  bitmap = reinterpret_cast<BitmapPage<PAGE_SIZE> *>(buffer);
+  ASSERT(bitmap->AllocatePage(page_offset), "failed in allocated in bitmap");
+//  printf("%d\n", page_offset);
+  WritePhysicalPage(physical_id, buffer);
+  return i * BITMAP_SIZE + page_offset;
 }
 
 /**
  * TODO: Student Implement
  */
 void DiskManager::DeAllocatePage(page_id_t logical_page_id) {
-  ASSERT(false, "Not implemented yet.");
+  DiskFileMetaPage *meta_page = reinterpret_cast<DiskFileMetaPage *>(meta_data_);
+  page_id_t physical_bitmap_id = (logical_page_id / BITMAP_SIZE) * (BITMAP_SIZE + 1) + 1;
+  char buffer[PAGE_SIZE];
+  ReadPhysicalPage(physical_bitmap_id, buffer);
+  BitmapPage<PAGE_SIZE> *bitmap = reinterpret_cast<BitmapPage<PAGE_SIZE> *>(buffer);
+  uint32_t page_offset = logical_page_id % BITMAP_SIZE;
+  ASSERT(bitmap->DeAllocatePage(page_offset), "failed in deallocated in bitmap");
+  int i = logical_page_id / BITMAP_SIZE;
+  meta_page->extent_used_page_[i] --;
+  meta_page->num_allocated_pages_ --;
+  WritePhysicalPage(physical_bitmap_id, buffer);
 }
 
 /**
  * TODO: Student Implement
  */
 bool DiskManager::IsPageFree(page_id_t logical_page_id) {
-  return false;
+  page_id_t physical_bitmap_id = (logical_page_id / BITMAP_SIZE) * (BITMAP_SIZE + 1) + 1;
+  char buffer[PAGE_SIZE];
+  ReadPhysicalPage(physical_bitmap_id, buffer);
+  BitmapPage<PAGE_SIZE> *bitmap = reinterpret_cast<BitmapPage<PAGE_SIZE> *>(buffer);
+  uint32_t page_offset = logical_page_id % BITMAP_SIZE;
+  return bitmap->IsPageFree(page_offset);
 }
 
 /**
  * TODO: Student Implement
  */
 page_id_t DiskManager::MapPageId(page_id_t logical_page_id) {
-  return 0;
+  return logical_page_id / BITMAP_SIZE + logical_page_id + 2;
 }
 
 int DiskManager::GetFileSize(const std::string &file_name) {
