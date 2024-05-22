@@ -3,7 +3,7 @@
 
 #include <memory>
 #include <vector>
-
+#include <cstring>
 #include "common/macros.h"
 #include "common/rowid.h"
 #include "record/field.h"

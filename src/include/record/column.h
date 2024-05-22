@@ -2,7 +2,7 @@
 #define MINISQL_COLUMN_H
 
 #include <string>
-
+#include <cstring>
 #include "common/macros.h"
 #include "record/types.h"
 

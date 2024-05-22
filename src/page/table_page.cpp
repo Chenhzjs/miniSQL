@@ -30,10 +30,12 @@ bool TablePage::InsertTuple(Row &row, Schema *schema, Txn *txn, LockManager *loc
   }
   // Otherwise we claim available free space..
   SetFreeSpacePointer(GetFreeSpacePointer() - serialized_size);
+//  LOG(INFO) << GetFreeSpacePointer();
   uint32_t __attribute__((unused)) write_bytes = row.SerializeTo(GetData() + GetFreeSpacePointer(), schema);
   ASSERT(write_bytes == serialized_size, "Unexpected behavior in row serialize.");
 
   // Set the tuple.
+//  LOG(INFO) << "maybe here segmetation fault2";
   SetTupleOffsetAtSlot(i, GetFreeSpacePointer());
   SetTupleSize(i, serialized_size);
   // Set rid
@@ -41,6 +43,7 @@ bool TablePage::InsertTuple(Row &row, Schema *schema, Txn *txn, LockManager *loc
   if (i == GetTupleCount()) {
     SetTupleCount(GetTupleCount() + 1);
   }
+//  LOG(INFO) << "maybe here segmetation fault3";
   return true;
 }
 

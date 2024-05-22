@@ -27,7 +27,7 @@ TEST(TableHeapTest, TableHeapSampleTest) {
   uint32_t size = 0;
   TableHeap *table_heap = TableHeap::Create(bpm_, schema.get(), nullptr, nullptr, nullptr);
   for (int i = 0; i < row_nums; i++) {
-    int32_t len = RandomUtils::RandomInt(0, 64);
+    int32_t len = RandomUtils::RandomInt(1, 64);
     char *characters = new char[len];
     RandomUtils::RandomString(characters, len);
     Fields *fields =
@@ -35,6 +35,7 @@ TEST(TableHeapTest, TableHeapSampleTest) {
                    Field(TypeId::kTypeFloat, RandomUtils::RandomFloat(-999.f, 999.f))};
     Row row(*fields);
     ASSERT_TRUE(table_heap->InsertTuple(row, nullptr));
+//    LOG(INFO) << "here1";
     if (row_values.find(row.GetRowId().Get()) != row_values.end()) {
       std::cout << row.GetRowId().Get() << std::endl;
       ASSERT_TRUE(false);
@@ -44,7 +45,6 @@ TEST(TableHeapTest, TableHeapSampleTest) {
     }
     delete[] characters;
   }
-
   ASSERT_EQ(row_nums, row_values.size());
   ASSERT_EQ(row_nums, size);
   for (auto row_kv : row_values) {

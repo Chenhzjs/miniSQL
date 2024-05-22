@@ -1530,3 +1530,31 @@ gmake: warning:  Clock skew detected.  Your build may be incomplete.
 Source file was:
 __attribute__((__deprecated__)) int somefunc() { return 0; }
     int main() { return somefunc();}
+Determining size of u_int16_t passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_baca2/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_baca2.dir/build.make CMakeFiles/cmTC_baca2.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_baca2.dir/HAVE_U_INT16_T.cpp.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_baca2.dir/HAVE_U_INT16_T.cpp.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CheckTypeSize/HAVE_U_INT16_T.cpp
+Linking CXX executable cmTC_baca2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_baca2.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_baca2.dir/HAVE_U_INT16_T.cpp.o -o cmTC_baca2 
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+
+
+
+Determining size of uint16_t passed with the following output:
+Change Dir: /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_c7f0f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c7f0f.dir/build.make CMakeFiles/cmTC_c7f0f.dir/build
+gmake[1]: Entering directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c7f0f.dir/HAVE_UINT16_T.cpp.o
+/usr/bin/c++   -fPIE -std=gnu++17 -o CMakeFiles/cmTC_c7f0f.dir/HAVE_UINT16_T.cpp.o -c /mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CheckTypeSize/HAVE_UINT16_T.cpp
+Linking CXX executable cmTC_c7f0f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c7f0f.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_c7f0f.dir/HAVE_UINT16_T.cpp.o -o cmTC_c7f0f 
+gmake[1]: Leaving directory '/mnt/d/miniSQL/cmake-build-debug-wsl/CMakeFiles/CMakeTmp'
+
+
+

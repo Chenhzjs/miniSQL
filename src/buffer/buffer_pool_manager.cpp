@@ -119,6 +119,7 @@ Page *BufferPoolManager::NewPage(page_id_t &page_id) {
   }
   page->ResetMemory();
   page->page_id_ = page_id;
+  page->is_dirty_ = true;
   disk_manager_->ReadPage(page->page_id_, page->data_);
   replacer_->Pin(frame_id);
   page->pin_count_ = 1;
