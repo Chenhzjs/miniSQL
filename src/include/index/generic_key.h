@@ -39,7 +39,9 @@ class KeyManager {
     Row rhs_key(INVALID_ROWID);
     DeserializeToKey(lhs, lhs_key, key_schema_);
     DeserializeToKey(rhs, rhs_key, key_schema_);
-
+//    LOG(INFO) << "left_key_count: " << lhs_key.GetFieldCount();
+//    LOG(INFO) << "right_key_count: " << rhs_key.GetFieldCount();
+//    LOG(INFO) << "key_schema: " << key_schema_->GetColumnCount();
     for (uint32_t i = 0; i < column_count; i++) {
       Field *lhs_value = lhs_key.GetField(i);
       Field *rhs_value = rhs_key.GetField(i);

@@ -16,11 +16,14 @@ class Schema {
       : columns_(std::move(columns)), is_manage_(is_manage_) {}
 
   ~Schema() {
+//    LOG(INFO) << "50";
     if (is_manage_) {
       for (auto column : columns_) {
+//        LOG(INFO) << column;
         delete column;
       }
     }
+//    LOG(INFO) << "52";
   }
 
   inline const std::vector<Column *> &GetColumns() const { return columns_; }

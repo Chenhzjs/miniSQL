@@ -46,6 +46,7 @@ Page *BufferPoolManager::FetchPage(page_id_t page_id) {
     return page;
   }
   // 1.2
+//  LOG(ERROR) << "maybe uncorrected";
   frame_id_t frame_id = -1;
   bool find_victim = false;
   if (!free_list_.empty()) {
@@ -177,8 +178,11 @@ bool BufferPoolManager::UnpinPage(page_id_t page_id, bool is_dirty) {
   }
   frame_id_t frame_id = page_table_[page_id];
   Page *page = &(pages_[frame_id]);
+//  LOG(INFO) << "frame_id = " << frame_id << " page_id = " << page_id << " page->page_id_ = " << page->page_id_;
+//  LOG(INFO) << "page address = " << page;
   ASSERT(page_id == page->page_id_, "the unordered_map may get ruined!");
   if (page->GetPinCount() == 0) {
+    replacer_->Unpin(frame_id);
     latch_.unlock();
     return false;
   }

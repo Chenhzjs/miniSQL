@@ -48,24 +48,30 @@ TEST(CatalogTest, CatalogTableTest) {
   std::vector<Column *> columns = {new Column("id", TypeId::kTypeInt, 0, false, false),
                                    new Column("name", TypeId::kTypeChar, 64, 1, true, false),
                                    new Column("account", TypeId::kTypeFloat, 2, true, false)};
-  auto schema = std::make_shared<Schema>(columns);
+  auto schema = new Schema(columns);
   Txn txn;
+//  LOG(INFO) << "0";
   /** You should use DeepCopySchema in CreateTable. **/
-  catalog_01->CreateTable("table-1", schema.get(), &txn, table_info);
+  catalog_01->CreateTable("table-1", schema, &txn, table_info);
   ASSERT_TRUE(table_info != nullptr);
   TableInfo *table_info_02 = nullptr;
   ASSERT_EQ(DB_SUCCESS, catalog_01->GetTable("table-1", table_info_02));
   ASSERT_EQ(table_info, table_info_02);
+//  LOG(INFO) << "1";
   auto *table_heap = table_info->GetTableHeap();
   ASSERT_TRUE(table_heap != nullptr);
   delete db_01;
   /** Stage 2: Testing catalog loading */
+//  LOG(INFO) << "2";
   auto db_02 = new DBStorageEngine(db_file_name, false);
   auto &catalog_02 = db_02->catalog_mgr_;
+//  LOG(INFO) << "3";
   TableInfo *table_info_03 = nullptr;
   ASSERT_EQ(DB_TABLE_NOT_EXIST, catalog_02->GetTable("table-2", table_info_03));
   ASSERT_EQ(DB_SUCCESS, catalog_02->GetTable("table-1", table_info_03));
+//  LOG(INFO) << "4";
   delete db_02;
+//  LOG(INFO) << "5";
 }
 
 TEST(CatalogTest, CatalogIndexTest) {
@@ -77,9 +83,10 @@ TEST(CatalogTest, CatalogIndexTest) {
   std::vector<Column *> columns = {new Column("id", TypeId::kTypeInt, 0, false, false),
                                    new Column("name", TypeId::kTypeChar, 64, 1, true, false),
                                    new Column("account", TypeId::kTypeFloat, 2, true, false)};
-  auto schema = std::make_shared<Schema>(columns);
+//  auto schema = std::make_shared<Schema>(columns);
+  auto schema = new Schema(columns); // !!!
   Txn txn;
-  catalog_01->CreateTable("table-1", schema.get(), &txn, table_info);
+  catalog_01->CreateTable("table-1", schema, &txn, table_info);
   ASSERT_TRUE(table_info != nullptr);
 
   IndexInfo *index_info = nullptr;

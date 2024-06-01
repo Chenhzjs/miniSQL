@@ -11,7 +11,11 @@ class TableMetadata {
   friend class TableInfo;
 
  public:
-  ~TableMetadata() { delete schema_; }
+  ~TableMetadata() {
+//    LOG(INFO) << "40";
+    delete schema_;
+//    LOG(INFO) << "41";
+  }
 
   uint32_t SerializeTo(char *buf) const;
 
@@ -54,8 +58,11 @@ class TableInfo {
   static TableInfo *Create() { return new TableInfo(); }
 
   ~TableInfo() {
-    delete table_meta_;
+//    LOG(INFO) << "31";
     delete table_heap_;
+//    LOG(INFO) << "30";
+    delete table_meta_;
+
   }
 
   void Init(TableMetadata *table_meta, TableHeap *table_heap) {

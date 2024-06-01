@@ -116,7 +116,7 @@ class CatalogManager {
   std::unordered_map<std::string, table_id_t> table_names_;
   std::unordered_map<table_id_t, TableInfo *> tables_;
   // map for indexes: table_name->index_name->indexes
-  std::unordered_map<std::string, std::unordered_map<std::string, index_id_t>> index_names_;
+  std::unordered_map<std::string, std::unordered_map<std::string, index_id_t> > index_names_;
   std::unordered_map<index_id_t, IndexInfo *> indexes_;
 };
 

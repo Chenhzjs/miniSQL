@@ -42,8 +42,11 @@ DBStorageEngine::DBStorageEngine(std::string db_name, bool init, uint32_t buffer
 }
 
 DBStorageEngine::~DBStorageEngine() {
+//  LOG(INFO) << "10";
   delete catalog_mgr_;
+//  LOG(INFO) << "11";
   delete bpm_;
+//  LOG(INFO) << "12";
   delete disk_mgr_;
 }
 

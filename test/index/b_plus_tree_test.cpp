@@ -42,9 +42,11 @@ TEST(BPlusTreeTests, SampleTest) {
     kv_map[keys[i]] = values[i];
   }
   // Insert data
+//  LOG(INFO) << "here0";
   for (int i = 0; i < n; i++) {
     tree.Insert(keys[i], values[i]);
   }
+//  LOG(INFO) << "here1";
   ASSERT_TRUE(tree.Check());
   // Print tree
   tree.PrintTree(mgr[0], table_schema);
