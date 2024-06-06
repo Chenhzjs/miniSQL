@@ -12,23 +12,35 @@
 TEST_F(ExecutorTest, SimpleSeqScanTest) {
   // Construct query plan
   TableInfo *table_info;
-  GetExecutorContext()->GetCatalog()->GetTable("table-1", table_info);
+  auto catalog = GetExecutorContext()->GetCatalog();
+  cout << catalog->GetTable("table-1", table_info);
+//  LOG(INFO) << "here0" << std::endl;
   const Schema *schema = table_info->GetSchema();
+//  LOG(INFO) << "here1" << std::endl;
   auto col_a = MakeColumnValueExpression(*schema, 0, "id");
+//  LOG(INFO) << "here2" << std::endl;
   auto col_b = MakeColumnValueExpression(*schema, 0, "name");
+//  LOG(INFO) << "here3" << std::endl;
   auto const500 = MakeConstantValueExpression(Field(kTypeInt, 500));
+//  LOG(INFO) << "here4" << std::endl;
   auto predicate = MakeComparisonExpression(col_a, const500, "<");
+//  LOG(INFO) << "here10" << std::endl;
   auto out_schema = MakeOutputSchema({{"id", col_a}, {"name", col_b}});
+//  LOG(INFO) << "here11" << std::endl;
   auto plan = make_shared<SeqScanPlanNode>(out_schema, table_info->GetTableName(), predicate);
   // Execute
+//  LOG(INFO) << "here2" << std::endl;
   std::vector<Row> result_set{};
+//  LOG(INFO) << "here12" << std::endl;
   GetExecutionEngine()->ExecutePlan(plan, &result_set, GetTxn(), GetExecutorContext());
 
   // Verify
   ASSERT_EQ(result_set.size(), 500);
+//  LOG(INFO) << "here13" << std::endl;
   for (const auto &row : result_set) {
     ASSERT_TRUE(row.GetField(0)->CompareLessThan(Field(kTypeInt, 500)));
   }
+//  LOG(INFO) << "here13" << std::endl;
 }
 
 // DELETE FROM table-1 WHERE id == 50;

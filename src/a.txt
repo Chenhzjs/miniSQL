@@ -1,0 +1,17 @@
+create database db0;
+use db0;
+create table t1(a int, b char(20) unique, c float, primary key(a, c));
+create table student(
+  sno char(8),
+  sage int,
+  sab float unique,
+  primary key (sno, sab)
+);
+show indexes;
+insert into t1 values(1, "aaa", 2.33);
+insert into t1 values(2, "bbb", 3.33);
+insert into t1 values(3, "ccc", 4.33);
+select * from t1;
+select * from t1 where a = 1;
+update t1 set c = 3;
+

@@ -100,8 +100,7 @@ CatalogManager::CatalogManager(BufferPoolManager *buffer_pool_manager, LockManag
         std::string index_name = index_meta_data->GetIndexName();
         table_id_t table_id = index_meta_data->GetTableId();
         ASSERT(index_id == index_meta_data->GetIndexId(), "do not use the iter.first.");
-        std::unordered_map<std::string, index_id_t> index_temp_map{{index_name, index_id}};
-        index_names_.emplace(tables_[table_id]->GetTableName(), index_temp_map);
+        index_names_[tables_[table_id]->GetTableName()].emplace(index_name, next_index_id_);
         IndexInfo *index_info = IndexInfo::Create();
         TableInfo *table_info = tables_[table_id];
         index_info->Init(index_meta_data, table_info, buffer_pool_manager_);
@@ -157,6 +156,7 @@ dberr_t CatalogManager::CreateTable(const string &table_name, TableSchema *schem
  */
 dberr_t CatalogManager::GetTable(const string &table_name, TableInfo *&table_info) {
   if (table_names_.find(table_name) == table_names_.end()) {
+    table_info = nullptr;
     return DB_TABLE_NOT_EXIST;
   }
   table_id_t table_id = table_names_[table_name];
@@ -211,8 +211,8 @@ dberr_t CatalogManager::CreateIndex(const std::string &table_name, const string 
   TableInfo *table_info = tables_[table_id];
   index_info = IndexInfo::Create();
   index_info->Init(index_meta_data, table_info, buffer_pool_manager_);
-  std::unordered_map<std::string, index_id_t> index_temp_map{{index_name, next_index_id_}};
-  index_names_.emplace(table_name, index_temp_map);
+//  cout << table_name << " " << index_name << " " << next_index_id_ << endl;
+  index_names_[table_name].emplace(index_name, next_index_id_);
   // get the needed column
   TableHeap *table_heap = table_info->GetTableHeap();
   vector<Field> field;
@@ -227,6 +227,7 @@ dberr_t CatalogManager::CreateIndex(const std::string &table_name, const string 
   indexes_.emplace(next_index_id_, index_info);
   next_index_id_ ++;
   buffer_pool_manager_->UnpinPage(page_id, true);
+//  cout << "index_names_size: " << index_names_.size() << " indexes_size: " << indexes_.size() << endl;
   return DB_SUCCESS;
 }
 
@@ -255,10 +256,14 @@ dberr_t CatalogManager::GetTableIndexes(const std::string &table_name, std::vect
     return DB_INDEX_NOT_FOUND;
   }
   indexes.clear();
+//  cout << "here 10" << endl;
   auto start = index_names_.find(table_name);
+//  cout << "index_names_size: " << index_names_.size() << endl;
   for (auto iter : start->second) {
     auto index_id = iter.second;
+//    cout << "here 11" << endl;
     indexes.push_back(indexes_.find(index_id)->second);
+//    cout << "here 12" << endl;
   }
   return DB_SUCCESS;
 }
@@ -269,17 +274,24 @@ dberr_t CatalogManager::GetTableIndexes(const std::string &table_name, std::vect
 dberr_t CatalogManager::DropTable(const string &table_name) {
 
   // delete index
-  auto start = index_names_.find(table_name);
-  if (start != index_names_.end()) {
-    for (auto iter : start->second) {
-      auto index_name = iter.first;
-      dberr_t s = DropIndex(table_name, index_name);
-      if (s != DB_SUCCESS) {
-          return s;
-      }
+  while (index_names_.find(table_name) != index_names_.end()) {
+    cout << index_names_.count(table_name) << endl;
+//    cout << "here 20" << endl;
+    auto start = index_names_.find(table_name);
+//    cout << "here 21" << endl;
+    auto iter = start->second.begin();
+//    cout << "here 22" << endl;
+
+    auto index_name = iter->first;
+//    cout << "here 23" << endl;
+    dberr_t s = DropIndex(table_name, index_name);
+//    cout << "Drop index " << table_name << "-" << index_name << endl;
+    if (s != DB_SUCCESS) {
+        return s;
     }
   }
   // delete table
+//  cout << "Start drop table." << endl;
   table_id_t table_id = table_names_[table_name];
   table_names_.erase(table_name);
   page_id_t page_id = catalog_meta_->table_meta_pages_[table_id];
@@ -303,10 +315,14 @@ dberr_t CatalogManager::DropIndex(const string &table_name, const string &index_
     return DB_INDEX_NOT_FOUND;
   }
   index_id_t index_id = temp.find(index_name)->second;
-  temp.erase(index_name);
+  index_names_[table_name].erase(index_name);
+  if (index_names_[table_name].empty()) {
+    index_names_.erase(table_name);
+  }
   indexes_.erase(index_id);
   page_id_t page_id = catalog_meta_->index_meta_pages_[index_id];
   buffer_pool_manager_->DeletePage(page_id);
+
 
   catalog_meta_->index_meta_pages_.erase(index_id);
   dberr_t err = FlushCatalogMetaPage();
@@ -361,7 +377,7 @@ dberr_t CatalogManager::LoadIndex(const index_id_t index_id, const page_id_t pag
   if (index_names_.find(table_name) != index_names_.end()) {
     index_names_.find(table_name)->second.emplace(index_meta_data->GetIndexName(), index_id);
   } else {
-    index_names_.emplace(table_name, index_temp_map);
+    index_names_[table_name].emplace(index_meta_data->GetIndexName(), next_index_id_);
   }
   IndexInfo *index_info = IndexInfo::Create();
   index_info->Init(index_meta_data, tables_.find(table_id)->second, buffer_pool_manager_);

@@ -6,12 +6,16 @@
 /**
  * TODO: Student Implement
  */
+TableIterator::TableIterator(TableHeap *table_heap, Row *row, Txn *txn) {
+  row_ = row;
+  table_heap_ = table_heap;
+  txn_ = txn;
+}
 TableIterator::TableIterator(TableHeap *table_heap, RowId rid, Txn *txn) {
   row_ = new Row(rid);
   table_heap_ = table_heap;
   txn_ = txn;
 }
-
 TableIterator::TableIterator(const TableIterator &other) {
   row_ = new Row(*(other.row_));
   table_heap_ = other.table_heap_;
@@ -62,7 +66,9 @@ TableIterator &TableIterator::operator++() {
    RowId next_rid;
    // check on this page
    if (table_page->GetNextTupleRid(row_->GetRowId(), &next_rid)) {
+//     cout << row_->GetRowId().Get() << " " << row_->GetFieldCount() << endl;
      row_->SetRowId(next_rid);
+//     cout << row_->GetRowId().Get() << " " << row_->GetFieldCount() << endl;
      table_heap_->GetTuple(row_, txn_);
      table_heap_->buffer_pool_manager_->UnpinPage(table_page->GetTablePageId(), false);
      return *this;
@@ -89,5 +95,5 @@ TableIterator TableIterator::operator++(int) {
   TableHeap *table_heap = table_heap_;
   Txn *txn = txn_;
   ++(*this);
-  return TableIterator(table_heap, row->GetRowId(), txn);
+  return TableIterator(table_heap, row, txn);
 }

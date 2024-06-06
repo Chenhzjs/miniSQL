@@ -8,6 +8,7 @@
 #include <string>
 
 void SyntaxTreePrinter::PrintTree(std::ofstream &out) {
+
   if (root_ == nullptr) {
     out << "digraph G{ }" << std::endl;
     return;

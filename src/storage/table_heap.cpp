@@ -113,6 +113,7 @@ bool TableHeap::GetTuple(Row *row, Txn *txn) {
     buffer_pool_manager_->UnpinPage(page_id, false);
     return false;
   }
+//  cout << row->GetRowId().Get() << " " << row->GetFieldCount() << endl;
   bool check = page->GetTuple(row, schema_, txn, lock_manager_);
   if (check) {
     buffer_pool_manager_->UnpinPage(page_id, false);
@@ -156,7 +157,10 @@ TableIterator TableHeap::Begin(Txn *txn) {
   }
   // get
   if (page_id != INVALID_PAGE_ID) {
-    return TableIterator(this, first_rid, txn);
+    Row *row = new Row(first_rid);
+    auto table_page = reinterpret_cast<TablePage *>(buffer_pool_manager_->FetchPage(page_id));
+    table_page->GetTuple(row, schema_, txn, lock_manager_);
+    return TableIterator(this, row, txn);
   }
   // not get
   return End();
