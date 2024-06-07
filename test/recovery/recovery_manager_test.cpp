@@ -24,6 +24,7 @@ TEST_F(RecoveryManagerTest, RecoveryTest) {
   ASSERT_EQ(d0->lsn_, d1->prev_lsn_);
   ASSERT_EQ(d1->lsn_, d2->prev_lsn_);
   ASSERT_EQ(INVALID_LSN, d3->prev_lsn_);
+//  LOG(INFO) << "1";
 
   /*--------- CheckPoint ---------*/
   CheckPoint checkpoint;
@@ -33,6 +34,7 @@ TEST_F(RecoveryManagerTest, RecoveryTest) {
   checkpoint.AddData("A", 2050);
   /*--------- CheckPoint ---------*/
 
+//  LOG(INFO) << "2";
   auto d4 = CreateInsertLog(1, "C", 600);  // <T1, C, -, 600>
   auto d5 = CreateCommitLog(1);            // <T1 Commit>
   ASSERT_EQ(d3->lsn_, d4->prev_lsn_);
@@ -52,13 +54,16 @@ TEST_F(RecoveryManagerTest, RecoveryTest) {
 
   std::vector<LogRecPtr> logs = {d0, d1, d2, d3, d4, d5, d6, d7, d8, d9, d10};
 
+//  LOG(INFO) << "3";
   RecoveryManager recovery_mgr;
   recovery_mgr.Init(checkpoint);
+//  LOG(INFO) << "3";
   for (const auto &log : logs) {
     recovery_mgr.AppendLogRec(log);
   }
   auto &db = recovery_mgr.GetDatabase();
 
+//  LOG(INFO) << "5";
   recovery_mgr.RedoPhase();
   ASSERT_EQ(db["A"], 2000);
   ASSERT_EQ(db["B"], 1000);
