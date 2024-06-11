@@ -34,6 +34,7 @@ Page *BufferPoolManager::FetchPage(page_id_t page_id) {
   // 3.     Delete R from the page table and insert P.
   // 4.     Update P's metadata, read in the page content from disk, and then return a pointer to P.
   latch_.lock();
+  if (page_id == INVALID_PAGE_ID) return nullptr;
   // 1.
   auto iter = page_table_.find(page_id);
   // 1.1

@@ -80,7 +80,7 @@ void BPlusTreePage::SetMaxSize(int size) {
  * TODO: Student Implement
  */
 int BPlusTreePage::GetMinSize() const {
-  return ceil(max_size_ / 2);
+  return max_size_ / 2;
 }
 
 /*

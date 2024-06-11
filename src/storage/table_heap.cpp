@@ -107,7 +107,9 @@ void TableHeap::RollbackDelete(const RowId &rid, Txn *txn) {
  */
 bool TableHeap::GetTuple(Row *row, Txn *txn) {
   RowId rid = row->GetRowId();
+//  cout << "rid: " << rid.Get() << endl;
   page_id_t page_id = rid.GetPageId();
+//  cout << "page_id: " << page_id << endl;
   auto page = reinterpret_cast<TablePage *>(buffer_pool_manager_->FetchPage(page_id));
   if (page == nullptr) {
     buffer_pool_manager_->UnpinPage(page_id, false);

@@ -18,6 +18,8 @@
 #include "planner/planner.h"
 #include "utils/utils.h"
 #include "parser/minisql_yacc.h"
+#include <time.h>
+
 extern "C" {
 int yyparse(void);
 #include "parser/minisql_lex.h"
@@ -271,7 +273,7 @@ dberr_t ExecuteEngine::ExecuteDropDatabase(pSyntaxNode ast, ExecuteContext *cont
   if (dbs_.find(db_name) == dbs_.end()) {
     return DB_NOT_EXIST;
   }
-  remove(db_name.c_str());
+  remove(("./databases/" + db_name).c_str());
   delete dbs_[db_name];
   dbs_.erase(db_name);
   cout << "Database " << db_name << " is dropped successfully." << endl;
@@ -787,12 +789,14 @@ dberr_t ExecuteEngine::ExecuteExecfile(pSyntaxNode ast, ExecuteContext *context)
 #ifdef ENABLE_EXECUTE_DEBUG
   LOG(INFO) << "ExecuteExecfile" << std::endl;
 #endif
+  clock_t start, end;
   std::string file_name = ast->child_->val_;
   ifstream in(file_name, ios::in);
   if (!in.is_open()) {
     cout << "file not exist, please check the address" << endl;
     return DB_FAILED;
   }
+  start = clock();
   const int buf_size = 1024;
   char cmd[buf_size];
   while (!in.eof()) {
@@ -820,15 +824,15 @@ dberr_t ExecuteEngine::ExecuteExecfile(pSyntaxNode ast, ExecuteContext *context)
     yyparse();
 
     // parse result handle
-    if (MinisqlParserGetError()) {
-      // error
-      printf("%s\n", MinisqlParserGetErrorMessage());
-    } else {
+//    if (MinisqlParserGetError()) {
+//      // error
+//      printf("%s\n", MinisqlParserGetErrorMessage());
+//    } else {
       // Comment them out if you don't need to debug the syntax tree
   //    printf("[INFO] Sql syntax parse ok!\n");
   //    SyntaxTreePrinter printer(MinisqlGetParserRootNode());
   //    printer.PrintTree(syntax_tree_file_mgr[syntax_tree_id++]);
-    }
+//    }
 
     auto result = this->Execute(MinisqlGetParserRootNode());
 
@@ -843,7 +847,8 @@ dberr_t ExecuteEngine::ExecuteExecfile(pSyntaxNode ast, ExecuteContext *context)
       break;
     }
   }
-  cout << "ExecuteExecfile " << file_name << " done successfully" << endl;
+  end = clock();
+  cout << "ExecuteExecfile " << file_name << " done successfully in " << (double)(end - start) / CLOCKS_PER_SEC << "s" << endl;
   return DB_SUCCESS;
 }
 

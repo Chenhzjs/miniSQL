@@ -9,10 +9,13 @@ IndexScanExecutor::IndexScanExecutor(ExecuteContext *exec_ctx, const IndexScanPl
     : AbstractExecutor(exec_ctx), plan_(plan) {}
 
 void IndexScanExecutor::Init() {
+//  cout << "1" << endl;
   exec_ctx_->GetCatalog()->GetTable(plan_->GetTableName(), table_info_);
   auto first_row = table_info_->GetTableHeap()->Begin(nullptr);
+//  cout << (*first_row)
   result_ = IndexScan(plan_->GetPredicate());
   is_schema_same_ = SchemaEqual(table_info_->GetSchema(), plan_->OutputSchema());
+//  cout << "2" << endl;
 }
 
 bool IndexScanExecutor::SchemaEqual(const Schema *table_schema, const Schema *output_schema) {
@@ -47,6 +50,7 @@ void IndexScanExecutor::TupleTransfer(const Schema *table_schema, const Schema *
 vector<RowId> IndexScanExecutor::IndexScan(AbstractExpressionRef predicate) {
   switch (predicate->GetType()) {
     case ExpressionType::LogicExpression: {
+//      cout << "LogicExpression" << endl;
       vector<RowId> lhs = IndexScan(predicate->GetChildAt(0));
       vector<RowId> rhs = IndexScan(predicate->GetChildAt(1));
       if (lhs.empty()) return rhs;
@@ -58,12 +62,17 @@ vector<RowId> IndexScanExecutor::IndexScan(AbstractExpressionRef predicate) {
       return result;
     }
     case ExpressionType::ComparisonExpression: {
+//      cout << "ComparisonExpression" << endl;
       std::vector<RowId> ret;
       std::vector<Field> fields{predicate->GetChildAt(1)->Evaluate(nullptr)};
       Row key(fields);
+//      cout << "1" << endl;
       for (auto index : plan_->indexes_) {
+//        cout << "2" << endl;
         uint32_t col_idx = dynamic_pointer_cast<ColumnValueExpression>(predicate->GetChildAt(0))->GetColIdx();
+//        cout << "3" << endl;
         if (col_idx == index->GetIndexKeySchema()->GetColumn(0)->GetTableInd()) {
+//          cout << "4" << endl;
           index->GetIndex()->ScanKey(key, ret, nullptr,
                                      dynamic_pointer_cast<ComparisonExpression>(predicate)->GetComparisonType());
           break;
@@ -81,7 +90,9 @@ bool IndexScanExecutor::Next(Row *row, RowId *rid) {
   auto table_schema = table_info_->GetSchema();
   while (cursor_ < result_.size()) {
     auto p_row = new Row(result_[cursor_]);
+//    cout << "Get tuple start" << endl;
     table_info_->GetTableHeap()->GetTuple(p_row, nullptr);
+//    cout << "Get tuple: " << p_row->GetRowId().GetPageId() << endl;
     if (plan_->need_filter_) {
       if (!predicate->Evaluate(p_row).CompareEquals(Field(kTypeInt, 1))) {
         cursor_++;

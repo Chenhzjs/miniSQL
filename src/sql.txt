@@ -15,3 +15,13 @@ select * from t1;
 select * from t1 where a = 1;
 update t1 set c = 3;
 
+execfile "../final_test/account00.txt";
+execfile "../final_test/account01.txt";
+execfile "../final_test/account02.txt";
+execfile "../final_test/account03.txt";
+execfile "../final_test/account04.txt";
+execfile "../final_test/account05.txt";
+execfile "../final_test/account06.txt";
+execfile "../final_test/account07.txt";
+execfile "../final_test/account08.txt";
+execfile "../final_test/account09.txt";

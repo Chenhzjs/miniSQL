@@ -14,7 +14,7 @@ dberr_t BPlusTreeIndex::InsertEntry(const Row &key, RowId row_id, Txn *txn) {
   processor_.SerializeFromKey(index_key, key, key_schema_);
 
   bool status = container_.Insert(index_key, row_id, txn);
-  delete index_key;
+  free(index_key);
   //  TreeFileManagers mgr("tree_");
   //  static int i = 0;
   //  if (i % 10 == 0) container_.PrintTree(mgr[i]);
@@ -29,9 +29,8 @@ dberr_t BPlusTreeIndex::InsertEntry(const Row &key, RowId row_id, Txn *txn) {
 dberr_t BPlusTreeIndex::RemoveEntry(const Row &key, RowId row_id, Txn *txn) {
   GenericKey *index_key = processor_.InitKey();
   processor_.SerializeFromKey(index_key, key, key_schema_);
-
   container_.Remove(index_key, txn);
-  delete index_key;
+  free(index_key);
   return DB_SUCCESS;
 }
 
@@ -39,6 +38,7 @@ dberr_t BPlusTreeIndex::ScanKey(const Row &key, vector<RowId> &result, Txn *txn,
   GenericKey *index_key = processor_.InitKey();
   processor_.SerializeFromKey(index_key, key, key_schema_);
   auto end_iter = GetEndIterator();
+//  cout << compare_operator << endl;
   if (compare_operator == "=") {
     container_.GetValue(index_key, result, txn);
   } else if (compare_operator == ">") {
@@ -64,14 +64,21 @@ dberr_t BPlusTreeIndex::ScanKey(const Row &key, vector<RowId> &result, Txn *txn,
     }
     container_.GetValue(index_key, result, txn);
   } else if (compare_operator == "<>") {
+//    cout << "1" << endl;
+//    cout << "result_size: " << result.size() << endl;
+//    cout << "2" << endl;
     for (auto iter = GetBeginIterator(); iter != end_iter; ++iter) {
       result.emplace_back((*iter).second);
     }
+//    cout << "result_size: " << result.size() << endl;
+//    cout << "3" << endl;
     vector<RowId> temp;
-    if (container_.GetValue(index_key, temp, txn))
+    if (container_.GetValue(index_key, temp, txn)) {
+//      cout << temp[0].Get() << endl;
       result.erase(find(result.begin(), result.end(), temp[0]));
+    }
   }
-  delete index_key;
+  free(index_key);
   if (!result.empty())
     return DB_SUCCESS;
   else

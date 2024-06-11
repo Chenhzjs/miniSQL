@@ -201,7 +201,7 @@ page_id_t InternalPage::RemoveAndReturnOnlyChild() {
  * pages that are moved to the recipient
  */
 void InternalPage::MoveAllTo(InternalPage *recipient, GenericKey *middle_key, BufferPoolManager *buffer_pool_manager) {
-  this->SetKeyAt(0, middle_key);
+//  this->SetKeyAt(0, middle_key);
   recipient->CopyNFrom(this->PairPtrAt(0), this->GetSize(), buffer_pool_manager);
   this->SetSize(0);
 }
@@ -219,8 +219,8 @@ void InternalPage::MoveAllTo(InternalPage *recipient, GenericKey *middle_key, Bu
  */
 void InternalPage::MoveFirstToEndOf(InternalPage *recipient, GenericKey *middle_key,
                                     BufferPoolManager *buffer_pool_manager) {
-  this->SetKeyAt(0, middle_key);
-  recipient->CopyLastFrom(middle_key, ValueAt(0), buffer_pool_manager);
+//  this->SetKeyAt(0, middle_key);
+  recipient->CopyLastFrom(KeyAt(0), ValueAt(0), buffer_pool_manager);
   this->Remove(0);
 }
 
@@ -247,8 +247,8 @@ void InternalPage::CopyLastFrom(GenericKey *key, const page_id_t value, BufferPo
  */
 void InternalPage::MoveLastToFrontOf(InternalPage *recipient, GenericKey *middle_key,
                                      BufferPoolManager *buffer_pool_manager) {
-  recipient->SetKeyAt(0, middle_key);
   recipient->CopyFirstFrom(ValueAt(this->GetSize() - 1), buffer_pool_manager);
+  recipient->SetKeyAt(0, KeyAt(this->GetSize() - 1));
   this->SetSize(this->GetSize() - 1);
 }
 
